@@ -1,2 +1,2 @@
 # bookshelf-apps
-A simple bookshelf web apps made with vanilla JavaScript
+A simple bookshelf web apps made with vanilla JavaScript and Tailwind CSS
