@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+		/>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Bookshelf Apps</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="font-poppins">
+		<header>
+			<h1 class="font-bold text-center text-3xl p-5 mb-12 bg-indigo-400 text-white">Bookshelf Apps</h1>
+		</header>
+		<main>
+			<section class="menu-container">
+				<h2 class="text-xl text-white font-bold p-5 bg-indigo-400">Masukkan Buku Baru</h2>
+				<form id="inputBook" class="flex flex-col self-center w-11/12 items-center py-6 m-2">
+					<div class="input">
+						<label for="inputBookTitle" class="inline-block w-3/12 sm:w-28 font-medium">Judul</label>
+						<input
+							id="inputBookTitle"
+							type="text"
+							required
+							class="rounded w-4/6 py-1.5 px-3 bg-indigo-100 outline-none focus:ring-2 focus:ring-indigo-400"
+						/>
+					</div>
+					<div class="input">
+						<label for="inputBookAuthor" class="inline-block w-3/12 sm:w-28 font-medium">Penulis</label>
+						<input
+							id="inputBookAuthor"
+							type="text"
+							required
+							class="rounded w-4/6 py-1.5 px-3 bg-indigo-100 outline-none focus:ring-2 focus:ring-indigo-400"
+						/>
+					</div>
+					<div class="input">
+						<label for="inputBookYear" class="inline-block w-3/12 sm:w-28 font-medium">Tahun</label>
+						<input
+							id="inputBookYear"
+							type="number"
+							required
+							class="rounded w-4/6 py-1.5 px-3 bg-indigo-100 outline-none focus:ring-2 focus:ring-indigo-400"
+						/>
+					</div>
+					<div class="input">
+						<label for="inputBookIsComplete" class="inline-block w-3/12 sm:w-28 font-medium">Selesai dibaca</label>
+						<input id="inputBookIsComplete" type="checkbox" class="rounded" />
+					</div>
+					<button
+						id="bookSubmit"
+						type="submit"
+						class="btn bg-indigo-300 border-indigo-50 font-medium text-white hover:bg-indigo-400 transition-all"
+					>
+						Masukkan Buku ke rak <span class="italic font-semibold">Belum selesai dibaca</span>
+					</button>
+				</form>
+			</section>
+			<section class="menu-container">
+				<h2 class="text-xl text-white font-bold p-5 bg-indigo-400">Cari Buku</h2>
+				<form id="searchBook" class="flex flex-col self-center w-11/12 items-center py-6 m-2">
+					<input
+						id="searchBookTitle"
+						type="text"
+						placeholder="Ketik Judul Buku"
+						class="rounded-full w-4/6 py-2 px-5 mb-2 bg-indigo-100 outline-none focus:ring-2 focus:ring-indigo-400"
+					/>
+					<button
+						id="searchSubmit"
+						type="submit"
+						class="btn bg-indigo-300 border-indigo-50 font-medium text-white hover:bg-indigo-400 transition-all"
+					>
+						Cari
+					</button>
+				</form>
+			</section>
+			<div class="xl:w-7/12 mx-auto overflow-auto mb-8">
+				<section class="bookshelf xl:float-left transition-all">
+					<h2 class="text-xl text-white font-bold p-5 bg-indigo-400">Belum selesai dibaca</h2>
+					<div id="incompleteBookshelfList"></div>
+				</section>
+
+				<section class="bookshelf xl:float-right">
+					<h2 class="text-xl text-white font-bold p-5 bg-indigo-400">Selesai dibaca</h2>
+					<div id="completeBookshelfList"></div>
+				</section>
+			</div>
+		</main>
+		<script src="js/data.js" type="text/javascript"></script>
+		<script src="js/dom.js" type="text/javascript"></script>
+		<script src="js/script.js" type="text/javascript"></script>
+	</body>
+</html>
